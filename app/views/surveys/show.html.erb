@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<div id="page-title">
+	<h1><%= @survey.title %></h1>
+</div>
+
+<div id="language-options">
+	<%= render :partial => "language_options", :collection => @survey.languages.uniq!, :as => "language", :locals => {:selected_language => @language} %>
+</div>
+
+<div id="survey-content">
+	<%= render :partial => "survey" %>
+</div>
+
+

@@ -1,0 +1,24 @@
+<% if @intro_text %>
+<div id="intro-text">
+	<h2><%= @intro_text %></h2>
+</div>
+<% end %>
+
+<%= form_tag "/submit_survey", :id => "surveyForm" do -%>
+
+	<%= hidden_field_tag 'survey_code', @survey_code %>
+	
+	<div id="survey-questions">
+		<%= render :partial => "question", :collection => @questions %>
+	</div>
+
+	<%= submit_tag "Submit" %>
+
+<% end -%>
+
+<script>
+	$().ready(function() {
+		// validate the survey form when it is submitted
+		$("#surveyForm").validate();
+	});
+</script>

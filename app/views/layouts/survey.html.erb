@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jilliankozyra</title>
+  <%= stylesheet_link_tag "survey" %>
+	<%= javascript_include_tag "jquery.validate.js" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<% if flash[:warning] or flash[:notice] %>
+	  <div id="flash">
+			<h3><%= flash[:notice] %></h3>
+		</div>
+	<% end %>
+
+	<div id="wrapper">
+		<div id="inner">
+			
+			<%= yield %>
+			
+		</div>
+		
+		<div id="footer-wrapper">
+			<%= render :partial => "shared/survey_footer" %>
+		</div>
+		
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<div id="journal">
+
+	<div id="buttons">
+		<span id="collected">
+			<%= link_to image_tag("/images/collected_feed.png", :id => "collected-image", :alt => "Collected"), "http://www.itsmypierogitive.com", :onmouseover => "roll_over('collected-image','images/collected_feed2.png')", :onmouseout => "roll_over('collected-image','images/collected_feed.png')" %>
+		</span>
+		<span id="twitter">
+			<%= link_to image_tag("/images/twitter_feed.png", :id => "twitter-image", :alt => "Twitter"), "http://twitter.com/jilliankozyra", :onmouseover => "roll_over('twitter-image','images/twitter_feed2.png')", :onmouseout => "roll_over('twitter-image','images/twitter_feed.png')" %>
+		</span>
+		<span id="poland">
+			<%= link_to image_tag("/images/poland.png", :id => "poland-image", :alt => "It's My Pierogi-tive"), "http://www.itsmypierogitive.com", :onmouseover => "roll_over('poland-image','images/poland2.png')", :onmouseout => "roll_over('poland-image','images/poland.png')" %>
+		</span>
+		<span id="baking">
+			<%= link_to image_tag("/images/baking.png", :id => "baking-image", :alt => "Baking Brainy"), "http://www.bakingbrainy.com", :onmouseover => "roll_over('baking-image','images/baking2.png')", :onmouseout => "roll_over('baking-image','images/baking.png')" %>
+		</span>
+		<span id="name">
+			<%= image_tag "/images/name.png", :id => "name-image", :alt => "Jillian Kozyra"%>
+		</span>
+		<span id="resume">
+			<%= link_to image_tag("/images/resume.png", :id => "resume-image", :alt => "Resume"), "/files/JillianKozyraResume.pdf", :onmouseover => "roll_over('resume-image','images/resume2.png')", :onmouseout => "roll_over('resume-image','images/resume.png')" %>
+		</span>
+		<span id="about">
+			<%= link_to image_tag("/images/about.png", :id => "about-image", :alt => "About"), {:controller => "home", :action => "about"}, :onmouseover => "roll_over('about-image','images/about2.png')", :onmouseout => "roll_over('about-image','images/about.png')" %>
+		</span>
+		<span id="graphics">
+			<%= link_to image_tag("/images/graphics.png", :id => "graphics-image", :alt => "Computer Graphics"), "http://homepages.nyu.edu/~jek339/graphics/", :onmouseover => "roll_over('graphics-image','images/graphics2.png')", :onmouseout => "roll_over('graphics-image','images/graphics.png')" %>
+		</span>
+		<span id="twitter_div"><ul id="twitter_update_list"></ul></span>
+		<span id="tweet"><img src="images/twitter.png"></span>
+	</div>
+</div>
+			
+<script text="text/javascript"
+src="http://twitter.com/statuses/user_timeline/jilliankozyra.json?callback=twitterCallback2&count=1"></script>

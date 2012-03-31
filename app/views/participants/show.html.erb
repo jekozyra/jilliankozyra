@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @participant.name %>
+</p>
+
+<p>
+  <b>Original name:</b>
+  <%= @participant.original_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @participant.email %>
+</p>
+
+<p>
+  <b>Party:</b>
+  <%= @participant.party %>
+</p>
+
+<p>
+  <b>Survey code:</b>
+  <%= @participant.survey_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>

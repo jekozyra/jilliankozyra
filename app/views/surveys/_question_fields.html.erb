@@ -1,0 +1,27 @@
+<div class="fields">
+  <p>
+    <%= f.label :content, "Question" %><br />
+    <%= f.text_field :content %><br />
+  </p>
+	<p>
+		<%= f.label :category %><br />
+    <%= f.select :category, ["Text-field", "Radio", "Text-area"], {}, {:class => "category-list"} %>
+	</p>
+	<p>
+    <%= f.label :number %><br />
+    <%= f.text_field :number %><br />
+  </p>
+	<p>
+    <%= f.label :mandatory %><br />
+    <%= f.check_box :mandatory %><br />
+  </p>
+	<p>
+		<%= f.label :language %><br />
+		<%= f.collection_select :language_id, Language.all, :id, :language  %>
+	</p>
+	<p><%= link_to_remove_fields "remove", f %></p>
+  <%= f.fields_for :choices do |builder| %>
+    <%= render 'choice_fields', :f => builder %>
+  <% end %>
+  <p><%= link_to_add_fields "Add Choice", f, :choices %></p>
+</div>

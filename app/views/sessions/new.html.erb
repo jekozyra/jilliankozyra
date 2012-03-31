@@ -1,0 +1,17 @@
+<div id="page-title">
+	<h1>Login</h1>
+</div>
+
+<div id="login-form">
+<%= form_tag :controller => "sessions" do %>
+	<div class="left-col wide">
+		<%= label_tag :email %>
+		<%= text_field_tag :email, params[:email] %>
+	</div>
+	<div class="right-col wide">
+		<%= label_tag :password %>
+		<%= password_field_tag :password %>
+	</div>
+	<div class="right-col narrow"><%= submit_tag "Log in", :class => "button" %></div>
+<% end %>
+</div>
