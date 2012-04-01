@@ -6,14 +6,14 @@
 </p>
 
 <p>
-  <b>Password digest:</b>
-  <%= @user.password_digest %>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+<p>
+  <b>Admin:</b>
+  <%= @user.admin? %>
 </p>
 
-<p>
-  <b>Survey code:</b>
-  <%= @user.survey_code %>
-</p>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
