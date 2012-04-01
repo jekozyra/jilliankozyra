@@ -90,13 +90,13 @@ class AnswersController < ApplicationController
   
   
   def submit_survey
-    @user = User.where(:survey_code => params[:survey_code]).first
+    @participant = Participant.where(:survey_code => params[:survey_code]).first
     answer_hash = params[:answer]
     answer_hash.each_pair do |question_id, answer_fields|
       answer = Answer.new
       answer.question_id = question_id.to_i
       answer.content = answer_fields["content"]
-      answer.participant_id = @user.id
+      answer.participant_id = @participant.id
       answer.save!
     end
     
