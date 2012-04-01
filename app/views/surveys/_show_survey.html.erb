@@ -1,0 +1,9 @@
+<%= form_tag "/submit_survey", :id => "surveyForm" do -%>
+
+	<%= hidden_field_tag 'survey_code', @survey_code %>
+	
+	<div id="survey-questions">
+		<%= render :partial => "question", :collection => @questions %>
+	</div>
+
+<% end -%>
