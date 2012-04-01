@@ -2,7 +2,7 @@
 
 class SurveysController < ApplicationController
   
-  before_filter :admin_authorize, :except => [:choose_language, :load_questions]
+  before_filter :admin_authorize, :except => [:choose_language, :load_questions, :thanks]
   
   layout 'survey'
   
