@@ -265,7 +265,7 @@ $.extend($.validator, {
 	},
 
 	messages: {
-		required: "This field is required.",
+		required: "This field is required. / Это обязательный атрибут. / Це обов'язковий атрибут.",
 		remote: "Please fix this field.",
 		email: "Please enter a valid email address.",
 		url: "Please enter a valid URL.",
