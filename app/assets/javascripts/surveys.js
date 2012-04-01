@@ -1,5 +1,5 @@
 $('.language-radio').live("change", function() {
-	$.post('/surveys/change_language',{language_id: $(this).val()});
+	$.post('/surveys/change_language',{language_id: $(this).val(), survey_id: $('#survey_id').val()});
 });
 
 /*$('.category-list').live("change", function() {

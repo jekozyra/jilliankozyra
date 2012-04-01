@@ -5,11 +5,12 @@
 </div>
 
 <div id="language-options">
+	<%= hidden_field_tag "survey_id", @survey.id %>
 	<%= render :partial => "language_options", :collection => @survey.languages.uniq!, :as => "language", :locals => {:selected_language => @language} %>
 </div>
 
 <div id="survey-content">
-	<%= render :partial => "survey" %>
+	<%= render :partial => "show_survey" %>
 </div>
 
 
