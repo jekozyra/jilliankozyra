@@ -1,11 +1,5 @@
 Jilliankozyra::Application.routes.draw do
   
-  get "administration/invite_participants"
-
-  get "administration/notify_participants"
-
-  get "admin_functions/notify_participants"
-
   resources :participants
 
   root :to => "home#index"
@@ -26,6 +20,11 @@ Jilliankozyra::Application.routes.draw do
 
   resources :questions
   
+  
+  match "administration/invite_participants" => "administration#invite_participants"
+  match "administration/notify_participants" => "administration#notify_participants"
+  match "administration/submit_invite_participants" => "administration#submit_invite_participants"
+  match "administration/submit_notify_participants" => "administration#submit_notify_participants"
   match 'surveys/:id/:survey_code' => 'surveys#choose_language', :as => "choose_language"
   match 'surveys/load_questions' => 'surveys#load_questions', :as => "load_questions"
   match 'surveys/change_language' => 'surveys#change_language'
@@ -33,6 +32,7 @@ Jilliankozyra::Application.routes.draw do
   match 'thanks' => 'surveys#thanks', :as => :thanks
   match 'about' => 'home#about', :as => :about
   match 'login' => 'sessions#new'
+  match 'logout' => 'sessions#destroy'
 
 
   
