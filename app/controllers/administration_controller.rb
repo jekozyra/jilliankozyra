@@ -1,5 +1,7 @@
 class AdministrationController < ApplicationController
   
+  before_filter :admin_authorize
+  
   layout 'survey'
   
   def invite_participants

@@ -1,5 +1,7 @@
 class ParticipantsController < ApplicationController
   
+  before_filter :admin_authorize
+  
   layout 'survey'
   
   # GET /participants
