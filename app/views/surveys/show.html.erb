@@ -9,6 +9,8 @@
 	<%= render :partial => "language_options", :collection => @survey.languages.uniq!, :as => "language", :locals => {:selected_language => @language} %>
 </div>
 
+<br />
+
 <div id="survey-content">
 	<%= render :partial => "show_survey" %>
 </div>
