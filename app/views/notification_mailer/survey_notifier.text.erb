@@ -1,1 +1,3 @@
-Welcome to example.com!
+Hey there, <%= @participant.name %>!
+It would be greatly appreciated if you would take my little survey. Click the link to do so.
+<%= link_to "Survey Url", choose_language_url(:id => @survey.id, :survey_code => @participant.survey_code) %>

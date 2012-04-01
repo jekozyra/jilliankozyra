@@ -3,7 +3,8 @@ class NotificationMailer < ActionMailer::Base
   
   def survey_notifier(participant, survey)
     @participant = participant
-    mail(:to => @participant.email, :subject => "New survey - #{survey.title}!")
+    @survey = survey
+    mail(:to => @participant.email, :subject => "New survey - #{@survey.title}!")
   end
   
 end

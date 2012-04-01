@@ -6,7 +6,13 @@ class AdministrationController < ApplicationController
   end
   
   def submit_invite_participants
+    @survey = Survey.find(params[:survey])
+    recipients = params[:participants]
     
+    recipients.each do |recipient|
+      participant = Participant.find(recipient)
+      NotificationMailer.survey_notifier(participant, @survey).deliver
+    end
   end
   
 

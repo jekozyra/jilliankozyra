@@ -3,14 +3,12 @@
 </div>
 
 <div id="form-content">
-	<%= form_tag '/administration/submit_invite_participants' do -%>
+	<%= form_tag administration_submit_invite_participants_url do %>
 		<%= select_tag 'participants', options_from_collection_for_select(Participant.all, 'id', 'name'), :multiple => true, :size => 15 %>
 		<br />
 		<%= select_tag 'survey', options_from_collection_for_select(Survey.all, 'id', 'title') %>
 		<br />
-		<%= text_area_tag "body", nil, :rows => 10, :cols => 90 %>
-		<br />
 		<%= submit_tag "Send" %>
-	<% end -%>
+	<% end %>
 </div>
 
