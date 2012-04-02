@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120402032404) do
+ActiveRecord::Schema.define(:version => 20120402194917) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
@@ -47,6 +47,11 @@ ActiveRecord::Schema.define(:version => 20120402032404) do
     t.string   "profile_link"
     t.string   "list_position"
     t.integer  "party_id"
+  end
+
+  create_table "participants_surveys", :id => false, :force => true do |t|
+    t.integer "participant_id"
+    t.integer "survey_id"
   end
 
   create_table "parties", :force => true do |t|
