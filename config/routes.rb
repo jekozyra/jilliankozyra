@@ -1,5 +1,7 @@
 Jilliankozyra::Application.routes.draw do
   
+  resources :parties
+
   resources :participants
 
   root :to => "home#index"
