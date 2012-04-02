@@ -5,7 +5,7 @@ class AdministrationController < ApplicationController
   layout 'survey'
   
   def invite_participants
-    @particpants = Participant.where(:email => "is not null")
+    @particpants = Participant.find(:all, :conditions => ["email IS NOT NULL"])#(:email => "is not null")
   end
   
   def submit_invite_participants
