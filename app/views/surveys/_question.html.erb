@@ -22,15 +22,12 @@
 		<% end %>
 	<% elsif question.category == "Radio" %>
 		<% question.choices.each do |choice| %>
-			<span class="radio-answer">
-				<%= answer_fields.label "content_#{choice.content.gsub(" ", "_").downcase}", choice.content %>
 			<% if question.mandatory? %>
 				<%= answer_fields.radio_button :content, choice.content, :class => "required" %>
 			<% else %>
 				<%= answer_fields.radio_button :content, choice.content %>
 			<% end %>
-			
-			</span>
+			<%= answer_fields.label "content_#{choice.content.gsub(" ", "_").downcase}", choice.content %>
 		<% end %>
 	<% end %>
 	</span>
