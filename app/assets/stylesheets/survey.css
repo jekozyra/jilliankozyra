@@ -61,6 +61,18 @@ a:hover{
 	font-family: "Georgia", serif;
 }
 
+#notification-text{
+	background:#53976D;
+	color:#000;
+	font-family:Arial, sans-serif;
+	padding:4px 10px;
+	margin:8px 0px;
+	border:1px dashed #DDEEDD;
+}
+
+#notification-text h3{
+	font-size:14px;
+}
 
 #table-div{
 	font-size:12px;

@@ -25,7 +25,9 @@ Jilliankozyra::Application.routes.draw do
   match "administration/notify_participants" => "administration#notify_participants"
   match "administration/submit_invite_participants" => "administration#submit_invite_participants"
   match "administration/submit_notify_participants" => "administration#submit_notify_participants"
+  match "administration/load_records" => "administration#load_records"
   match 'surveys/:id/:survey_code' => 'surveys#choose_language', :as => "choose_language"
+  match 'surveys_home' => 'surveys#home', :as => "surveys_home"
   match 'surveys/load_questions' => 'surveys#load_questions', :as => "load_questions"
   match 'surveys/change_language' => 'surveys#change_language'
   match 'submit_survey' => 'answers#submit_survey'

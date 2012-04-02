@@ -2,6 +2,10 @@ $('.language-radio').live("change", function() {
 	$.post('/surveys/change_language',{language_id: $(this).val(), survey_id: $('#survey_id').val()});
 });
 
+$(document).ready(function() {
+  $('#notification-text').delay(5000).fadeOut(4000);
+});
+
 /*$('.category-list').live("change", function() {
 	//$.post('/surveys/change_language',{language: $(this).val()});
   

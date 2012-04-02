@@ -3,8 +3,15 @@
 class SurveysController < ApplicationController
   
   before_filter :admin_authorize, :except => [:choose_language, :load_questions, :thanks]
+  before_filter :is_eligible, :only => [:choose_language]
   
   layout 'survey'
+  
+  
+  def home
+    @notification_text = params[:notification_text]
+  end
+  
   
   # GET /surveys
   # GET /surveys.json
@@ -32,7 +39,7 @@ class SurveysController < ApplicationController
   
   
   def change_language
-    @survey = Survey.find(session[:survey_id])
+    @survey = Survey.find(params[:survey_id])
     @language = params[:language_id] ? Language.find(params[:language_id]) : Language.find_by_language("English")
     @questions = @survey.questions_for_language(@language)
     
@@ -107,7 +114,7 @@ class SurveysController < ApplicationController
   
   
   def load_questions
-    @survey = Survey.find(session[:survey_id])
+    @survey = Survey.find(params[:survey_id])
     @language = params[:language] ? Language.find(params[:language]) : Language.find_by_language("English")
     @questions = @survey.questions_for_language(@language)
     @survey_code = params[:survey_code]
