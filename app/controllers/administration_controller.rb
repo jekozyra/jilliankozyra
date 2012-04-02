@@ -1,10 +1,11 @@
 class AdministrationController < ApplicationController
   
-  #before_filter :admin_authorize
+  before_filter :admin_authorize
   
   layout 'survey'
   
   def invite_participants
+    @particpants = Participant.where(:email => "is not null")
   end
   
   def submit_invite_participants
@@ -30,13 +31,7 @@ class AdministrationController < ApplicationController
     if File.exists?("#{Rails.public_path}/files/rada_ukr") and File.exists?("#{Rails.public_path}/files/rada_eng")
       IO.foreach("#{Rails.public_path}/files/rada_ukr") do |line|
         rep_ukr = line.chomp.split("|")
-=begin
-        puts "Original Name: " + rep_ukr[0]
-        puts "Email: " + rep_ukr[1]
-        puts "Party: " + rep_ukr[2]
-        puts "List position: " + rep_ukr[3]
-        puts "Profile link: " + rep_ukr[4]
-=end    
+          
         unless Participant.exists?(:profile_link => rep_ukr[4])
           participant = Participant.new(:original_name => rep_ukr[0],
                                          :email => rep_ukr[1],
@@ -64,11 +59,7 @@ class AdministrationController < ApplicationController
         participant.save! unless participant.nil?
         
         puts rep_eng[2] if participant.nil?
-        
-        #rep = name + "|" + email + "|" + profile_link
-        #puts rep_eng[0] ? "Name: " + rep_eng[0] : "------------------------------"
-        #puts rep_eng[1] ? "Email: " + rep_eng[1] : "------------------------------"
-        #puts rep_eng[2] ? "Profile link: " + rep_eng[2] : "------------------------------"
+
       end
       
     end
