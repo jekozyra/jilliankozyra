@@ -23,7 +23,7 @@
     <td><% if participant.email %><%= participant.email %><% end %></td>
 		<td><% if participant.profile_link %><%= participant.profile_link %><% end %></td>
 		<td><% if participant.survey_code %><%= participant.survey_code %><% end %></td>
-    <td><% if participant.party %><%= participant.party %><% end %></td>
+    <td><% if participant.party_id %><%= participant.party.abbreviation %><% end %></td>
 		<td><% if participant.list_position %><%= participant.list_position %><% end %></td>
     <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
     <td><%= link_to 'Destroy', participant, confirm: 'Are you sure?', method: :delete %></td>

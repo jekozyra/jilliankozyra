@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120402025821) do
+ActiveRecord::Schema.define(:version => 20120402032404) do
 
   create_table "answers", :force => true do |t|
     t.text     "content"
@@ -40,12 +40,13 @@ ActiveRecord::Schema.define(:version => 20120402025821) do
     t.string   "name"
     t.string   "original_name"
     t.string   "email"
-    t.string   "party"
+    t.string   "party_name"
     t.string   "survey_code"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
     t.string   "profile_link"
     t.string   "list_position"
+    t.integer  "party_id"
   end
 
   create_table "parties", :force => true do |t|
