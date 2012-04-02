@@ -10,11 +10,15 @@ class AdministrationController < ApplicationController
   
   def submit_invite_participants
     @survey = Survey.find(params[:survey])
-    recipients = params[:participants]
     
-    recipients.each do |recipient|
-      participant = Participant.find(recipient)
-      NotificationMailer.survey_notifier(participant, @survey).deliver
+    if params[:participants]
+      params[:participants].each do |recipient|
+        participant = Participant.find(recipient)
+        unless participants.surveys.include?(@survey)
+          participant.surveys << @survey
+        end
+        NotificationMailer.survey_notifier(participant, @survey).deliver
+      end
     end
   end
   
@@ -28,6 +32,20 @@ class AdministrationController < ApplicationController
   
   def load_records
     
+    @participants = Participant.find(:all)
+    
+    puts @participants.size
+    
+    @participants.each do |participant|
+      party = Party.find_by_original_name(participant.party_name)
+
+      
+      unless party.nil?
+        participant.party_id = party.id
+        participant.save
+      end
+    end
+=begin    
     if File.exists?("#{Rails.public_path}/files/rada_ukr") and File.exists?("#{Rails.public_path}/files/rada_eng")
       IO.foreach("#{Rails.public_path}/files/rada_ukr") do |line|
         rep_ukr = line.chomp.split("|")
@@ -65,7 +83,7 @@ class AdministrationController < ApplicationController
     end
     
     redirect_to participants_url
-    
+=end
   end # end load_records
   
 end

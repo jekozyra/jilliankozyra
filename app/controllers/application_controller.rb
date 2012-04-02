@@ -23,11 +23,7 @@ class ApplicationController < ActionController::Base
     @survey = Survey.find(params[:id])
     @participant = Participant.find_by_survey_code(params[:survey_code])
     @questions = Question.where(:survey_id => @survey.id)
-    puts "***********************************"
-    puts @questions.map{|question| question.survey_id}
-    puts "--------------"
-    puts @participant.answers.map{|answer| answer.question.survey_id}
-    unless(@participant.answers.map{|answer| answer.question.survey_id} & @questions.map{|question| question.survey_id}).empty?
+    unless (@participant.answers.map{|answer| answer.question.survey_id} & @questions.map{|question| question.survey_id}).empty? and @participant.surveys.include?(@survey)
       redirect_to surveys_home_url(:notification_text => "You have already completed this survey!")
     end
   end

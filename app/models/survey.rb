@@ -5,6 +5,7 @@ class Survey < ActiveRecord::Base
   has_many :question_groups
   has_many :answers, :through => :questions
   has_many :languages, :through => :questions
+  has_and_belongs_to_many :participants
   accepts_nested_attributes_for :questions, :reject_if => lambda { |a| a[:content].blank? }, :allow_destroy => true
   
   
