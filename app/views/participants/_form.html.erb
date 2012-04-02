@@ -28,8 +28,8 @@
     <%= f.text_field :profile_link %>
   </div>
   <div class="field">
-    <%= f.label :party %><br />
-    <%= f.text_field :party %>
+    <%= f.label :party_id %><br />
+    <%= f.collection_select :party_id, Party.all, :id, :name, {:include_blank => true} %>
   </div>
   <div class="field">
     <%= f.label :list_position %><br />
