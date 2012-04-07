@@ -50,8 +50,8 @@ class AnswersController < ApplicationController
     @answer = Answer.new(params[:answer])
 
     respond_to do |format|
-      if @answer.content and @answer.content != "" 
-        @answer.save
+      if @answer.content and @answer.content != ""
+        @answer.save if @answer.content and @answer.content != ""
         format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
         format.json { render json: @answer, status: :created, location: @answer }
       else
