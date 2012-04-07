@@ -28,7 +28,7 @@
 			<% else %>
 				<%= answer_fields.radio_button :content, choice.content %>
 			<% end %>
-			<%= answer_fields.label "content_#{choice.content.gsub(" ", "_").downcase}", choice.content %>
+			<%= answer_fields.label "content_#{choice.content.gsub(" ", "_").downcase}", choice.content %><br />
 		<% end %>
 		</span>
 	<% end %>

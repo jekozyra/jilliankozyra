@@ -1,8 +1,14 @@
-<% if @intro_text %>
+<div id="welcome-text">
+	<%= @welcome_text %>
+</div>
+
+<br />
+
 <div id="intro-text">
 	<h2><%= @intro_text %></h2>
 </div>
-<% end %>
+
+<br />
 
 <%= form_tag "/submit_survey", :id => "surveyForm" do -%>
 

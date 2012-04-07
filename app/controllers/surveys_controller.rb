@@ -30,6 +30,22 @@ class SurveysController < ApplicationController
     @survey = Survey.find(params[:id])
     @language = params[:language] ? Language.find_by_language(params[:language]) : Language.find_by_language("English")
     @questions = @survey.questions_for_language(@language)
+    
+    @welcome_text = ""
+    @intro_text = ""
+    if @language.language == "English"
+      @welcome_text = "Hello. This survey will ask you to answer questions about your experiences as a member of the 
+      Verkhovna Rada. It should take 20-30 minutes to complete. Please answer as best you can. Thank you for your participation."
+      @intro_text = "Please complete the following questions. Mandatory questions are marked with an asterisk (*)."
+    elsif @language.language == "Russian"
+      @welcome_text = "Здравствуйте. В этом вопросе, речь будет идти о Вашем опыте в Верховной раде. Опрос будет занимать около 
+      20-30 минут. Пожалуйста, постарайтесь ответить тщательно на все вопросы. Спасибо большое за участие."
+      @intro_text = "Пожалуйста"
+    elsif @language.language == "Ukrainian"
+      @welcome_text = "Вітаю. У цьому опитуванні буде йти мова про Ваш досвід у Верховні Раді. Це опитування не займе більше 
+      ніж 20-30 хвилин. Прошу ретельно відповідати на питання. Дуже вдячна за участь."
+      @intro_text = "Please complete the following questions. Mandatory questions are marked with an asterisk (*)."
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -43,13 +59,22 @@ class SurveysController < ApplicationController
     @language = params[:language_id] ? Language.find(params[:language_id]) : Language.find_by_language("English")
     @questions = @survey.questions_for_language(@language)
     
+    @welcome_text = ""
+    @intro_text = ""
     if @language.language == "English"
+      @welcome_text = "Hello. This survey will ask you to answer questions about your experiences as a member of the 
+      Verkhovna Rada. It should take 20-30 minutes to complete. Please answer as best you can. Thank you for your participation."
       @intro_text = "Please complete the following questions. Mandatory questions are marked with an asterisk (*)."
     elsif @language.language == "Russian"
+      @welcome_text = "Здравствуйте. В этом вопросе, речь будет идти о Вашем опыте в Верховной раде. Опрос будет занимать около 
+      20-30 минут. Пожалуйста, постарайтесь ответить тщательно на все вопросы. Спасибо большое за участие."
       @intro_text = "Пожалуйста"
     elsif @language.language == "Ukrainian"
+      @welcome_text = "Вітаю. У цьому опитуванні буде йти мова про Ваш досвід у Верховні Раді. Це опитування не займе більше 
+      ніж 20-30 хвилин. Прошу ретельно відповідати на питання. Дуже вдячна за участь."
       @intro_text = "Please complete the following questions. Mandatory questions are marked with an asterisk (*)."
     end
+    
   end
   
 
@@ -119,14 +144,21 @@ class SurveysController < ApplicationController
     @questions = @survey.questions_for_language(@language)
     @survey_code = params[:survey_code]
     
+    @welcome_text = ""
+    @intro_text = ""
     if @language.language == "English"
-      @intro_text = "Hello. This survey will ask you to answer questions about your experiences as a member of the Verkhovna Rada. It should take 20-30 minutes to complete. Mandatory questions are marked with an asterisk (*). Please answer as best you can. Thank you for your participation. "
+      @welcome_text = "Hello. This survey will ask you to answer questions about your experiences as a member of the 
+      Verkhovna Rada. It should take 20-30 minutes to complete. Please answer as best you can. Thank you for your participation."
+      @intro_text = "Please complete the following questions. Mandatory questions are marked with an asterisk (*)."
     elsif @language.language == "Russian"
-      @intro_text = "Здравствуйте. В этом вопросе, речь будет идти о Вашем опыте в Верховной раде. Опрос будет занимать около 20-30 минут. Пожалуйста, постарайтесь ответить тщательно на все вопросы. Спасибо большое за участие."
+      @welcome_text = "Здравствуйте. В этом вопросе, речь будет идти о Вашем опыте в Верховной раде. Опрос будет занимать около 
+      20-30 минут. Пожалуйста, постарайтесь ответить тщательно на все вопросы. Спасибо большое за участие."
+      @intro_text = "Пожалуйста"
     elsif @language.language == "Ukrainian"
-      @intro_text = "Вітаю. У цьому опитуванні буде йти мова про Ваш досвід у Верховні Раді. Це опитування не займе більше ніж 20-30 хвилин. Прошу ретельно відповідати на питання. Дуже вдячна за участь. "
+      @welcome_text = "Вітаю. У цьому опитуванні буде йти мова про Ваш досвід у Верховні Раді. Це опитування не займе більше 
+      ніж 20-30 хвилин. Прошу ретельно відповідати на питання. Дуже вдячна за участь."
+      @intro_text = "Please complete the following questions. Mandatory questions are marked with an asterisk (*)."
     end
-    
   end
   
   

@@ -4,6 +4,7 @@
 	<h1><%= @survey.title %></h1>
 </div>
 
+
 <div id="language-options">
 	<%= hidden_field_tag "survey_id", @survey.id %>
 	<%= render :partial => "language_options", :collection => @survey.languages.uniq!, :as => "language", :locals => {:selected_language => @language} %>

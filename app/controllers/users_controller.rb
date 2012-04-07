@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-  before_filter :admin_authorize
+  before_filter :admin_authorize, :except => [:new, :create]
   
   layout 'survey'
   

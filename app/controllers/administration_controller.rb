@@ -4,21 +4,27 @@ class AdministrationController < ApplicationController
   
   layout 'survey'
   
+  
+  def index
+    
+  end
+  
+  
+  
   def invite_participants
     @particpants = Participant.find(:all, :conditions => ["email IS NOT NULL"])#(:email => "is not null")
   end
   
   def submit_invite_participants
     @survey = Survey.find(params[:survey])
+    params[:participants].nil? ? participants = [] : participants = params[:participants]
     
-    if params[:participants]
-      params[:participants].each do |recipient|
-        participant = Participant.find(recipient)
-        unless participants.surveys.include?(@survey)
-          participant.surveys << @survey
-        end
-        NotificationMailer.survey_notifier(participant, @survey).deliver
+    participants.each do |recipient|
+      participant = Participant.find(recipient.to_i)
+      unless participant.surveys.include?(@survey)
+        participant.surveys << @survey
       end
+      NotificationMailer.survey_notifier(participant, @survey).deliver
     end
   end
   
@@ -38,8 +44,6 @@ class AdministrationController < ApplicationController
     
     @participants.each do |participant|
       party = Party.find_by_original_name(participant.party_name)
-
-      
       unless party.nil?
         participant.party_id = party.id
         participant.save

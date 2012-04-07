@@ -23,6 +23,8 @@ Jilliankozyra::Application.routes.draw do
   resources :questions
   
   
+  match "administration" => "administration#index"
+  match "administration/index" => "administration#index"
   match "administration/invite_participants" => "administration#invite_participants"
   match "administration/notify_participants" => "administration#notify_participants"
   match "administration/submit_invite_participants" => "administration#submit_invite_participants"
