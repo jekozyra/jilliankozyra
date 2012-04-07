@@ -27,7 +27,7 @@ class AdministrationController < ApplicationController
       NotificationMailer.survey_notifier(participant, @survey).deliver
     end
     
-    redirect_to administration_url
+    redirect_to administration_url, :notice => "Emails sent."
   end
   
 
