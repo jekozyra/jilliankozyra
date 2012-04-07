@@ -26,6 +26,8 @@ class AdministrationController < ApplicationController
       end
       NotificationMailer.survey_notifier(participant, @survey).deliver
     end
+    
+    redirect_to administration_url
   end
   
 
