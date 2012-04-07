@@ -61,7 +61,7 @@ a:hover{
 	font-family: "Georgia", serif;
 }
 
-#notification-text{
+#notification-text, #flash{
 	background:#53976D;
 	color:#000;
 	font-family:Arial, sans-serif;
@@ -70,7 +70,7 @@ a:hover{
 	border:1px dashed #DDEEDD;
 }
 
-#notification-text h3{
+#notification-text h3, #flash h3{
 	font-size:14px;
 }
 

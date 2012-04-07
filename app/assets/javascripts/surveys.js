@@ -4,6 +4,7 @@ $('.language-radio').live("change", function() {
 
 $(document).ready(function() {
   $('#notification-text').delay(5000).fadeOut(4000);
+	$('#flash').delay(5000).fadeOut(4000);
 });
 
 /*$('.category-list').live("change", function() {
