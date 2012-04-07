@@ -186,7 +186,7 @@ td.narrow-col{
 #language-options p{
 }
 
-.language-option{
+.language-option, .language-choice{
 	margin:0px 15px 0px 0px;
 }
 
@@ -226,6 +226,16 @@ label.error{
 	margin-left:25px;
 	color:red;
 	font-size:80%;
+}
+
+
+/* administration nav page */
+#page-content{
+	
+}
+
+#page-content ul{
+	list-style:none;
 }
 
 

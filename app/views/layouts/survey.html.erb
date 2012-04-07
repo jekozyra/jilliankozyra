@@ -9,14 +9,14 @@
 </head>
 <body>
 
-	<% if flash[:warning] or flash[:notice] %>
-	  <div id="flash">
-			<h3><%= flash[:notice] %></h3>
-		</div>
-	<% end %>
-
 	<div id="wrapper">
 		<div id="inner">
+			
+			<% if flash[:warning] or flash[:notice] %>
+			  <div id="flash">
+					<h3><%= flash[:notice] %></h3>
+				</div>
+			<% end %>
 			
 			<%= yield %>
 			
