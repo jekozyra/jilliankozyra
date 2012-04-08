@@ -50,8 +50,7 @@ class AnswersController < ApplicationController
     @answer = Answer.new(params[:answer])
 
     respond_to do |format|
-      if @answer.content and @answer.content != ""
-        @answer.save if @answer.content and @answer.content != ""
+      if @answer.save
         format.html { redirect_to @answer, notice: 'Answer was successfully created.' }
         format.json { render json: @answer, status: :created, location: @answer }
       else
@@ -98,7 +97,7 @@ class AnswersController < ApplicationController
       answer.question_id = question_id.to_i
       answer.content = answer_fields["content"]
       answer.participant_id = @participant.id
-      answer.save!
+      answer.save! unless (answer.content.nil? or answer.content == "")
     end
     
     redirect_to thanks_url

@@ -240,6 +240,41 @@ label.error{
 
 
 
+/* search page */
+#search-content{
+	
+}
+
+.search-field{
+	width:800px;
+	display:inline;
+}
+
+.search-label{
+	width:80px;
+}
+
+.search-input{
+	width:720px;
+	display:inline;
+}
+
+.search-input input{
+	width:720px;
+}
+
+.search-input select{
+	width:790px;
+	padding:2px;
+	text-overflow: ellipsis;
+	overflow:visible;
+}
+
+.clr{
+	margin:10px 0px;
+	clear:both;
+}
+
 
 /* email forms */
 #form-content{

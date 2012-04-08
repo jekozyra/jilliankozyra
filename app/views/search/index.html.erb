@@ -1,0 +1,20 @@
+<div id="page-title">
+	<h1>Search</h1>
+</div>
+
+<div id="search-content">
+	<%= form_tag '/search/results', :id => "surveyForm" do -%>
+	
+		<div class="search-field">
+			<span class="search-label"><%= label_tag :survey, "Survey:" %></span><br />
+			<span class="search-input"><%= select_tag :survey, options_from_collection_for_select(@surveys, 'id', 'title') %></span>
+		</div>
+		<div class="clr"></div>
+		<div id="survey-details">
+			<%= render :partial => "survey_details", :locals => {:participants => @participants, :questions => @questions, :parties => @parties} %>
+		</div>
+		<div class="clr"></div>
+		<%= submit_tag "Search" %>
+	
+	<% end -%>
+</div>

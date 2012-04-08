@@ -1,0 +1,24 @@
+<div id="page-title">
+	<h1>Search Results</h1>
+</div>
+
+<div id="table-div">
+<table>
+  <tr>
+    <th>Question</th>
+		<th>Answer</th>
+		<th>Participant</th>
+		<th>Party</th>
+  </tr>
+
+<% @results.each do |result| %>
+  <tr>
+		<td><%= result.question.content %></td> 
+		<td><%= result.content %></td>
+		<td><%= result.participant.both_names %></td>
+		<td><%= result.participant.party.abbreviation %></td>
+  </tr>
+<% end %>
+</table>
+
+</div>

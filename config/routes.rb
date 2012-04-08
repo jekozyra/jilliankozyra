@@ -1,5 +1,11 @@
 Jilliankozyra::Application.routes.draw do
   
+  get "search/index"
+
+  post "search/results"
+  post "search/refine_participants"
+  post "search/refine_survey"
+
   resources :parties
 
   resources :participants
