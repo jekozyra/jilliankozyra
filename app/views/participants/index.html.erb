@@ -8,6 +8,7 @@
     <th>Name</th>
     <th>Original name</th>
     <th>Email</th>
+		<th>Gender</th>
 		<th>Profile</th>
     <th>Survey code</th>
 		<th>Party</th>
@@ -21,6 +22,7 @@
     <td><% if participant.name %><%= link_to participant.name, participant %><% end %></td>
     <td><% if participant.original_name %><%= participant.original_name %><% end %></td>
     <td><% if participant.email %><%= participant.email %><% end %></td>
+		<td><% if participant.gender %><%= participant.gender %><% end %></td>
 		<td><% if participant.profile_link %><%= participant.profile_link %><% end %></td>
 		<td><% if participant.survey_code %><%= participant.survey_code %><% end %></td>
     <td><% if participant.party_id %><%= participant.party.abbreviation %><% end %></td>
