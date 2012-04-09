@@ -16,7 +16,7 @@ class SearchController < ApplicationController
     survey = Survey.find(params[:survey])
     @participants = survey.participants
     @questions = Question.find_by_sql("SELECT * FROM questions, languages WHERE questions.survey_id = #{survey.id} AND questions.language_id = languages.id AND languages.language = 'English' order by questions.number")
-    @parties = Party.find(:all, :conditions => ["id IN (?)", @participants.map{|participant| participant.party_id}.compact.uniq])])
+    @parties = Party.find(:all, :conditions => ["id IN (?)", @participants.map{|participant| participant.party_id}.compact.uniq])
   end
   
   def refine_participants
