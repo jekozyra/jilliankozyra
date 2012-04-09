@@ -6,7 +6,7 @@ class NotificationMailer < ActionMailer::Base
   def survey_notifier(participant, survey)
     @participant = participant
     @survey = survey
-    mail(:to => @participant.email, :subject => "Опитування про коаліції у Верховній раді/Опрос о коалициях в Верховной раде/Survey on coalitions in the Verkhova Rada")
+    mail(:to => @participant.email, :subject => "Опитування про коаліції у Верховній раді/Опрос о коалициях в Верховной раде/Survey on coalitions in the Verkhova Radas")
   end
   
 end

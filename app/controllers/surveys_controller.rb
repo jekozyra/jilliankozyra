@@ -146,18 +146,22 @@ class SurveysController < ApplicationController
     
     @welcome_text = ""
     @intro_text = ""
+    @title = ""
     if @language.language == "English"
+      @title = "Coaltions in the Verkhovna Rada"
       @welcome_text = "Hello. This survey will ask you to answer questions about your experiences as a member of the 
       Verkhovna Rada. It should take 20-30 minutes to complete. Please answer as best you can. Thank you for your participation."
       @intro_text = "Please complete the following questions. Mandatory questions are marked with an asterisk (*)."
     elsif @language.language == "Russian"
+      @title = "Коалиции в Верховной раде"
       @welcome_text = "Здравствуйте. В этом вопросе, речь будет идти о Вашем опыте в Верховной раде. Опрос будет занимать около 
       20-30 минут. Пожалуйста, постарайтесь ответить тщательно на все вопросы. Спасибо большое за участие."
-      @intro_text = "Пожалуйста"
+      @intro_text = "Пожалуйста, ответьте на следующие вопросы. У обязательных вопросов есть звездочки (*)."
     elsif @language.language == "Ukrainian"
+      @title = "Коаліцій у Верховній раді"
       @welcome_text = "Вітаю. У цьому опитуванні буде йти мова про Ваш досвід у Верховні Раді. Це опитування не займе більше 
       ніж 20-30 хвилин. Прошу ретельно відповідати на питання. Дуже вдячна за участь."
-      @intro_text = "Please complete the following questions. Mandatory questions are marked with an asterisk (*)."
+      @intro_text = "Будь ласка, дайте відповідь на наступні питання. У обов'язкових питань є зірочки (*)."
     end
   end
   
