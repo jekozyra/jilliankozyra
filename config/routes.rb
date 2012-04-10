@@ -1,5 +1,11 @@
 Jilliankozyra::Application.routes.draw do
   
+  get "export/index"
+
+  post "export/export"
+
+  get "nia/index"
+
   get "search/index"
 
   post "search/results"
@@ -28,6 +34,9 @@ Jilliankozyra::Application.routes.draw do
 
   resources :questions
   
+  
+  match "nia" => "nia#index"
+  match "export" => "export#index"
   match "search" => "search#index"
   match "administration" => "administration#index"
   match "administration/index" => "administration#index"
