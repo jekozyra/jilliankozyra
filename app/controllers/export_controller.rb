@@ -1,6 +1,8 @@
 class ExportController < ApplicationController
   
   layout 'survey'
+
+  before_filter :admin_authorize
   
   def index
     @surveys = Survey.all
