@@ -1,0 +1,16 @@
+<div id="page-title">
+	<h1>Export</h1>
+</div>
+
+<div id="search-content">
+	<%= form_tag '/export/export', :id => "surveyForm" do -%>
+	
+		<div class="search-field">
+			<span class="search-label"><%= label_tag :participant, "Participants:" %></span><br />
+			<span class="search-input"><%= select_tag :participant, options_from_collection_for_select(@participants, 'id', 'both_names'), {:multiple => true, :size => 20} %></span>
+		</div>
+		<div class="clr"></div>
+		<%= submit_tag "Export to csv" %>
+	
+	<% end -%>
+</div>
