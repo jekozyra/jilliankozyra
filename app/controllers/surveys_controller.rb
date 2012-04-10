@@ -134,7 +134,7 @@ class SurveysController < ApplicationController
   def choose_language
     @survey = Survey.find(params[:id])
     @survey_code = params[:survey_code]
-    @intro_text = "Please select a language for the survey. / Пожалуйста"
+    @intro_text = "Будь ласка, виберіть мову для опитування. / Пожалуйста, выберите язык для опроса. / Please select a language for the survey."
   end
   
   
