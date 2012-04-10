@@ -10,10 +10,10 @@ class AdministrationController < ApplicationController
   end
   
   
-  
   def invite_participants
     @particpants = Participant.find(:all, :conditions => ["email IS NOT NULL"])#(:email => "is not null")
   end
+  
   
   def submit_invite_participants
     @survey = Survey.find(params[:survey])
@@ -33,6 +33,7 @@ class AdministrationController < ApplicationController
 
   def notify_participants
   end
+  
   
   def submit_notify_participants
   end
