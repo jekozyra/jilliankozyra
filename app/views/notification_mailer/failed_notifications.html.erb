@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+		<p>Notifications to the following people have failed:</p>
+		<p>
+			<% @failed_list.each do |participant| %>
+				<%= participant.both_names %> (<%= participant.email %>)<br />
+			<% end %>
+		</p>
+  </body>
+</html>

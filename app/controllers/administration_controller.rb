@@ -19,12 +19,27 @@ class AdministrationController < ApplicationController
     @survey = Survey.find(params[:survey])
     params[:participants].nil? ? participants = [] : participants = params[:participants]
     
+    failed_list = []
+    
     participants.each do |recipient|
       participant = Participant.find(recipient.to_i)
       unless participant.surveys.include?(@survey)
         participant.surveys << @survey
       end
-      NotificationMailer.survey_notifier(participant, @survey).deliver
+      begin
+        NotificationMailer.survey_notifier(participant, @survey).deliver
+      rescue
+        failed_list << participant
+      end
+      
+    end
+    
+    if failed_list.size > 0
+      begin
+        NotificationMailer.failed_notifications(failed_list).deliver
+      rescue
+        puts "failed to deliver failed notifications email"
+      end
     end
     
     redirect_to administration_url, :notice => "Emails sent."

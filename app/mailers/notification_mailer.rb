@@ -17,4 +17,11 @@ class NotificationMailer < ActionMailer::Base
     mail(:to => "jilliankozyra@gmail.com", :subject => "#{@participant.both_names} has completed your survey #{@survey.title}")
   end
   
+  def failed_notificications(failed_list)
+    
+    @failed_list = failed_list
+    
+    mail(:to => "jilliankozyra@gmail.com", :subject => "#{failed_list.size.to_s} Notifications Failed")
+  end
+  
 end
