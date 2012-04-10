@@ -100,6 +100,14 @@ class AnswersController < ApplicationController
       answer.save! unless (answer.content.nil? or answer.content == "")
     end
     
+    @survey = @participant.answers.last.question.survey
+    
+    begin
+      NotificationMailer.admin_notifier(@participant, @survey).deliver
+    rescue
+      puts "Unable to send notification email at this time"
+    end
+    
     redirect_to thanks_url
   end
   
