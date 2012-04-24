@@ -5,6 +5,7 @@
 <div id="table-div">
 <table>
   <tr>
+		<th>Number</th>
     <th>Question</th>
 		<th>Answer</th>
 		<th>Participant</th>
@@ -13,9 +14,10 @@
 
 <% @results.each do |result| %>
   <tr>
+		<td><%= result.question.number %></td> 
 		<td><%= result.question.content %></td> 
 		<td><%= result.content %></td>
-		<td><%= result.participant.both_names %></td>
+		<td><%= link_to result.participant.both_names, result.participant %></td>
 		<td><%= result.participant.party.abbreviation %></td>
   </tr>
 <% end %>

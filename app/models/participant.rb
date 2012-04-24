@@ -2,6 +2,8 @@
 
 class Participant < ActiveRecord::Base
   
+  default_scope :order => "name"
+  
   has_many :answers
   belongs_to :party
   has_and_belongs_to_many :surveys

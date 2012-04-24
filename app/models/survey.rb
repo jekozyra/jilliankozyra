@@ -13,4 +13,9 @@ class Survey < ActiveRecord::Base
     self.questions.where(:language_id => language_id).order(:number)
   end
   
+  def completed_participants
+    self.participants.where("id IN (?)", self.answers.map{|answer| answer.participant_id})
+  end
+  
+  
 end
