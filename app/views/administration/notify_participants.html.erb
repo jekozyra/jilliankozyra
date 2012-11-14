@@ -1,2 +1,14 @@
-<h1>Administration#notify_participants</h1>
-<p>Find me in app/views/administration/notify_participants.html.erb</p>
+<div id="page-title">
+	<h1>Invite Participants</h1>
+</div>
+
+<div id="form-content">
+	<%= form_tag administration_submit_notify_participants_url do %>
+		<%= select_tag 'participants', options_from_collection_for_select(Participant.find(:all, :conditions => ["email is not null AND id not in (?)", @participant_ids]), 'id', 'name'), :multiple => true, :size => 15 %>
+		<br />
+		<%= select_tag 'survey', options_from_collection_for_select(Survey.all, 'id', 'title') %>
+		<br />
+		<%= submit_tag "Send" %>
+	<% end %>
+</div>
+
