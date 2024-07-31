@@ -1,8 +1,0 @@
-<span class="language-choice">
-	<% if language.id == @survey.default_language_id %>
-		<%= radio_button_tag "language", language.id, true %>
-	<% elsif %>
-		<%= radio_button_tag "language", language.id, false %>
-	<% end %>
-	<%= label_tag "language_#{language.id}", language.original %>
-</span>

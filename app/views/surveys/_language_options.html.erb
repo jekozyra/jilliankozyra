@@ -1,8 +1,0 @@
-<span class="language-option">
-<% if language.language == selected_language.language %>
-	<%= radio_button_tag "language", language.id, true, :class => "language-radio" %>
-<% else %>
-	<%= radio_button_tag "language", language.id, false, :class => "language-radio" %>
-<% end %>
-<%= label_tag "language_#{language.id}", language.original %>
-</span>
