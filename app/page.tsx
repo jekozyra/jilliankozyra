@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Header from './components/Header';
 import Section from './components/Section';
 import { sections } from './utils/sections';
 import { cn } from './utils/merge';
 
 export default function Home() {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(true);
 
     return (
         <main
@@ -19,7 +19,7 @@ export default function Home() {
             )}
         >
             <div className='lg:w-3/5 w-full'>
-                <Header />
+                <Header darkMode={darkMode} setDarkMode={setDarkMode} />
                 {Object.entries(sections).map(([title, content]) => {
                     return (
                         <Section key={title} title={title}>
