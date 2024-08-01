@@ -1,7 +1,8 @@
 import type { Dispatch, SetStateAction } from 'react';
 
 import { MdDarkMode, MdLightMode } from 'react-icons/md';
-import { cn } from '../utils/merge';
+import { cn } from '@/lib/merge';
+import { setItem } from '@/lib/localStorage';
 
 function DarkModeToggle({
     darkMode,
@@ -18,7 +19,7 @@ function DarkModeToggle({
                     onChange={() => {
                         const newVal = !darkMode;
                         setDarkMode(newVal);
-                        localStorage.setItem('darkMode', `${newVal}`);
+                        setItem('darkMode', `${newVal}`);
                     }}
                 />
                 <div

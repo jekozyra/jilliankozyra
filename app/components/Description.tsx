@@ -1,4 +1,7 @@
-import { type DescriptionEntry, descriptionItems } from '../utils/description';
+import {
+    type DescriptionEntry,
+    descriptionItems,
+} from '@/app/utils/description';
 
 function DescriptionItem({ item }: { item: DescriptionEntry }) {
     return (

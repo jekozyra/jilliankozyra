@@ -1,6 +1,6 @@
 import NextLink, { type LinkProps as NextLinkProps } from 'next/link';
 import { forwardRef, type ReactNode } from 'react';
-import { cn } from '../utils/merge';
+import { cn } from '@/lib/merge';
 
 interface LinkProps extends NextLinkProps {
     children: ReactNode;

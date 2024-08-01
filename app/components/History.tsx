@@ -1,5 +1,5 @@
 import { MdEmergency, MdOutlineHorizontalRule } from 'react-icons/md';
-import { resume, type ResumeEntry } from '../utils/resume';
+import { resume, type ResumeEntry } from '@/app/utils/resume';
 
 function Asterisk() {
     return (

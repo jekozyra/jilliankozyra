@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Header from './components/Header';
 import Section from './components/Section';
 import { sections } from './utils/sections';
-import { cn } from './utils/merge';
+import { cn } from '@/lib/merge';
 
 export default function Home() {
     const cachedDarkMode = localStorage.getItem('darkMode');

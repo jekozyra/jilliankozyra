@@ -1,7 +1,7 @@
-import Cyclist from '../components/descriptions/Cyclist';
-import SoftwareEngineer from '../components/descriptions/SoftwareEngineer';
-import EngLeader from '../components/descriptions/EngLeader';
-import Climber from '../components/descriptions/Climber';
+import Cyclist from '@/app/components/descriptions/Cyclist';
+import SoftwareEngineer from '@/app/components/descriptions/SoftwareEngineer';
+import EngLeader from '@/app/components/descriptions/EngLeader';
+import Climber from '@/app/components/descriptions/Climber';
 
 export type DescriptionEntry = {
     flag: string;
