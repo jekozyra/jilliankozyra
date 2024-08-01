@@ -13,9 +13,13 @@ function DarkModeToggle({
                 <MdDarkMode />
                 <input
                     type='checkbox'
-                    value=''
+                    checked={!darkMode}
                     className='sr-only peer'
-                    onChange={() => setDarkMode(!darkMode)}
+                    onChange={() => {
+                        const newVal = !darkMode;
+                        setDarkMode(newVal);
+                        localStorage.setItem('darkMode', `${newVal}`);
+                    }}
                 />
                 <div
                     className={cn(

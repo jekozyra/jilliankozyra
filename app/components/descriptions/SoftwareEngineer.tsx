@@ -4,11 +4,11 @@ function SoftwareEngineer() {
     return (
         <div className='flex flex-col gap-2'>
             <div>
-                I&apos;ve worked as a software engineer at a variety of
-                companies from seed series startups to FAANGs. While I enjoy
-                contributing anywhere in the stack, my deepest experience is in
-                the backend. I&apos;ve built many APIs and pipelines, lately
-                with a focus on RAG to enable agentic LLMs.
+                I&apos;ve worked at a variety of companies from seed series
+                startups to FAANGs. While I enjoy contributing anywhere in the
+                stack, my deepest experience is in the backend. I&apos;ve built
+                many APIs and pipelines, lately with a focus on RAG to enable
+                agentic LLMs.
             </div>
             <div>
                 I do not have a strong language preference and prefer to use the

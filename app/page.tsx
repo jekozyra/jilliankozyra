@@ -7,7 +7,10 @@ import { sections } from './utils/sections';
 import { cn } from './utils/merge';
 
 export default function Home() {
-    const [darkMode, setDarkMode] = useState(true);
+    const cachedDarkMode = localStorage.getItem('darkMode');
+    const [darkMode, setDarkMode] = useState(
+        cachedDarkMode ? JSON.parse(cachedDarkMode) : true,
+    );
 
     return (
         <main
