@@ -5,9 +5,11 @@ import Header from './components/Header';
 import Section from './components/Section';
 import { sections } from './utils/sections';
 import { cn } from '@/lib/merge';
+import { getItem } from '@/lib/localStorage';
+import { LOCAL_STORAGE_KEY_DARK_MODE } from '@/lib/constants';
 
 export default function Home() {
-    const cachedDarkMode = localStorage.getItem('darkMode');
+    const cachedDarkMode = getItem(LOCAL_STORAGE_KEY_DARK_MODE);
     const [darkMode, setDarkMode] = useState(
         cachedDarkMode ? JSON.parse(cachedDarkMode) : true,
     );
