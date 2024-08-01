@@ -52,6 +52,7 @@ const config: Config = {
         './components/**/*.{js,ts,jsx,tsx,mdx}',
         './app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
+    darkMode: 'selector',
     theme: {
         extend: {
             fontFamily: {
@@ -71,6 +72,16 @@ const config: Config = {
                 accentDark,
                 greenLight: 'rgb(var(--green-light) / <alpha-value>)',
                 yellowDark: 'rgb(var(--yellow-dark) / <alpha-value>)',
+                backgroundDarkStart:
+                    'rgb(var(--background-dark-start) / <alpha-value>)',
+                backgroundDarkEnd:
+                    'rgb(var(--background-dark-end) / <alpha-value>)',
+                backgroundLightStart:
+                    'rgb(var(--background-light-start) / <alpha-value>)',
+                backgroundLightEnd:
+                    'rgb(var(--background-light-end) / <alpha-value>)',
+                foregroundLight: 'rgb(var(--foreground-light) / <alpha-value>)',
+                foregroundDark: 'rgb(var(--foreground-dark) / <alpha-value>)',
             },
         },
     },

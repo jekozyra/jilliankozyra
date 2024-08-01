@@ -25,7 +25,7 @@
     --accent-800: 83 67 19;
     --accent-900: 42 34 9;
     --accent-950: 21 17 4;
-    --green-light: 192 204 219;
+    --green-light: 93 168 146;
     --base-dark-50: 10 13 16;
     --base-dark-100: 19 26 32;
     --base-dark-200: 39 52 63;
@@ -49,31 +49,13 @@
     --accent-dark-900: 222 237 233;
     --accent-dark-950: 238 246 244;
     --yellow-dark: 228 210 148;
+    --background-dark-start: 23 25 28;
+    --background-dark-end: 46 50 56;
+    --background-light-start: 245 245 245;
+    --background-light-end: 255 255 255;
+    --foreground-light: 85 94 104;
+    --foreground-dark: 46 50 56;
   }
-
-:root {
-  --foreground-rgb: 85 94 104;
-  --background-start-rgb: 230, 230, 230;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 192 204 219;
-    --background-start-rgb: 23, 25, 28;
-    --background-end-rgb: 46, 50, 56;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
 @layer utilities {
   .text-balance {

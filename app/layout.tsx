@@ -27,7 +27,7 @@ export default function RootLayout({
     return (
         <html lang='en'>
             <body
-                className={`${martianMono.variable} ${hankenGrotesk.variable}`}
+                className={`${martianMono.variable} ${hankenGrotesk.variable} overscroll-none`}
             >
                 {children}
             </body>

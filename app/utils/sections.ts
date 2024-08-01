@@ -1,6 +1,6 @@
-import Description from '../components/Description';
-import Files from '../components/Files';
-import History from '../components/History';
+import Description from '@/app/components/Description';
+import Files from '@/app/components/Files';
+import History from '@/app/components/History';
 
 export const sections: { [key: string]: React.ReactNode } = {
     Name: 'Jillian Kozyra',
