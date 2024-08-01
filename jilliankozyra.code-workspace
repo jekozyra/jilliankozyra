@@ -1,0 +1,30 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "../jk_clean"
+        }
+    ],
+    "settings": {
+        "editor.detectIndentation": false,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "[typescriptreact]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "biomejs.biome"
+        },
+        "[json]": {
+          "editor.defaultFormatter": "vscode.json-language-features"
+        }
+      },
+      "extensions": {
+        "recommendations": [
+          "charliermarsh.ruff",
+          "biomejs.biome",
+          "oven.bun-vscode"
+        ]
+      }
+}
