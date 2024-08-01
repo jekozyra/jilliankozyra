@@ -56,6 +56,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-hanken-grotesk)", "sans-serif"],
+        serif: ["var(--font-martian-mono)", "serif"],
+        mono: ["var(--font-martian-mono)", "mono"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -66,6 +71,8 @@ const config: Config = {
         accent,
         primaryDark,
         accentDark,
+        greenLight: "rgb(var(--green-light) / <alpha-value>)",
+        yellowDark: "rgb(var(--yellow-dark) / <alpha-value>)",
       },
     },
   },

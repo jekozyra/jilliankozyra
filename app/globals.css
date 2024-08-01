@@ -42,7 +42,7 @@
     --accent-dark-200: 36 66 58;
     --accent-dark-300: 54 99 87;
     --accent-dark-400: 72 132 116;
-    --accent-dark-500: 93 168 14; /* default */
+    --accent-dark-500: 93 168 146; /* default */
     --accent-dark-600: 123 183 167;
     --accent-dark-700: 156 201 189;
     --accent-dark-800: 189 219 211;
@@ -53,8 +53,8 @@
 
 :root {
   --foreground-rgb: 85 94 104;
-  --background-start-rgb: 242, 242, 242;
-  --background-end-rgb: 217, 217, 217;
+  --background-start-rgb: 230, 230, 230;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
