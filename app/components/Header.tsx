@@ -11,7 +11,7 @@ function Header({
             <div className='flex flex-row justify-between'>
                 <div className='flex uppercase'>Jillian(1)</div>
                 <div className='flex'>jilliankozyra.com</div>
-                <div className='flex uppercase'>Jillian(1)</div>
+                <div className='hidden uppercase sm:flex'>Jillian(1)</div>
             </div>
         </div>
     );
