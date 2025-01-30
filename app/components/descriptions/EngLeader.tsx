@@ -8,9 +8,9 @@ function EngLeader() {
                 about small, stacked PRs.
             </div>
             <div>
-                I have led teams from 2-6 engineers and am comfortable designing
-                hiring processes, building teams, developing roadmaps, and
-                delivering feedback.
+                I have led teams from of varying sizes and am comfortable
+                designing hiring processes, building teams from scratch,
+                developing roadmaps, and delivering feedback.
             </div>
         </div>
     );
