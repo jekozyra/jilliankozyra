@@ -18,8 +18,8 @@ export const resume: ResumeEntries = [
             'Member of founding engineering team',
             'Hired and led platform engineering team',
             'Designed and built platform to ingest data at scale and surface it in app',
-            'Built RAG pipeline to harvest and automatically summarise documents',
-            'Worked on ways to standardise prompt iteration for non-technical team members',
+            'Built RAG pipeline to harvest and automatically add documents to context',
+            'Helped establish processes from hiring to project management',
         ],
     },
     {
@@ -29,10 +29,10 @@ export const resume: ResumeEntries = [
         company: 'Curative',
         responsibilities: [
             'Member of founding engineering team',
-            'Built out lab + patient management apps to scale from 0 to 200k COVID tests/day',
+            'Built out lab + patient management apps to go from 0 to 200k COVID tests/day',
             'Scaled up vaccine portal in response to viral demand',
-            'Interfaced with cusomters to build and support data synchronisation',
-            'Built technical support eng team to handle complex customer success requests',
+            'Interfaced with customers to build and support data synchronisation',
+            'Created technical support eng team to handle complex customer success requests',
         ],
     },
     {
