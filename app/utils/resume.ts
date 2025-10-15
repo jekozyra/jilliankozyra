@@ -24,7 +24,7 @@ export const resume: ResumeEntries = [
     },
     {
         title: 'Staff Software Engineer',
-        startDate: '2021',
+        startDate: '2020',
         endDate: '2021',
         company: 'Curative',
         responsibilities: [
