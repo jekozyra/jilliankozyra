@@ -18,10 +18,10 @@ function Climber() {
                 </Link>{' '}
                 in Newark, NJ. They have some of the best setting I&apos;ve ever
                 experienced (if you like more modern setting styles). I like to
-                visit local gyms when I travel to check out the different syles
+                visit local gyms when I travel to check out the different styles
                 of problems.
             </div>
-            <div>I am working towards projecting V9.</div>
+            <div>I am projecting V8 with a goal of getting a V10 before I'm 40.</div>
         </div>
     );
 }
