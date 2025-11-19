@@ -21,7 +21,7 @@ function Climber() {
                 visit local gyms when I travel to check out the different styles
                 of problems.
             </div>
-            <div>I am projecting V8 with a goal of getting a V10 before I'm 40.</div>
+            <div>I am projecting V8 with a goal of getting a V10 before I&apos;m 40.</div>
         </div>
     );
 }
