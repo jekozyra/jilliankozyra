@@ -3,9 +3,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: var(--font-hanken-grotesk), sans-serif;
-  --font-serif: var(--font-martian-mono), serif;
-  --font-mono: var(--font-martian-mono), mono;
+  --font-sans: var(--font-hanken-grotesk);
+  --font-serif: var(--font-martian-mono);
+  --font-mono: var(--font-martian-mono);
 
   --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
   --background-image-gradient-conic: conic-gradient(

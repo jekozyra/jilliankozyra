@@ -25,10 +25,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang='en'>
-            <body
-                className={`${martianMono.variable} ${hankenGrotesk.variable} overscroll-none`}
-            >
+        <html lang='en' className={`${martianMono.variable} ${hankenGrotesk.variable}`}>
+            <body className='overscroll-none'>
                 {children}
             </body>
         </html>
