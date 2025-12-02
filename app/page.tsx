@@ -22,9 +22,9 @@ export default function Home() {
         <main
             className={cn(
                 'flex w-full h-full min-h-screen flex-col items-center justify-between font-mono p-4 text-sm',
-                'text-primary-600 bg-gradient-to-b from-backgroundLightStart to-backgroundLightEnd',
+                'text-primary-600 bg-linear-to-b from-background-light-start to-background-light-end',
                 darkMode ? 'dark' : '',
-                'dark:text-primaryDark-800 dark:bg-gradient-to-b dark:from-backgroundDarkStart dark:to-backgroundDarkEnd',
+                'dark:text-primary-dark-800 dark:bg-linear-to-b dark:from-background-dark-start dark:to-background-dark-end',
             )}
         >
             <div className='lg:w-3/5 w-full'>

@@ -16,7 +16,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
                 target={target}
                 {...props}
                 className={cn(
-                    'text-greenLight dark:text-yellowDark hover:opacity-90',
+                    'text-green-light dark:text-yellow-dark hover:opacity-90',
                     className,
                 )}
             >
