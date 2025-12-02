@@ -29,9 +29,9 @@
       //   "bucket_name": "<BUCKET_NAME>",
       // },
     ],
-  pnpm fix  "images": {
+    "images": {
       // Enable image optimization
       // see https://opennext.js.org/cloudflare/howtos/image
       "binding": "IMAGES"
     }
-  }
+}
