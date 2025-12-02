@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Section from './components/Section';
 import { sections } from './utils/sections';
@@ -9,10 +9,14 @@ import { getItem } from '@/lib/localStorage';
 import { LOCAL_STORAGE_KEY_DARK_MODE } from '@/lib/constants';
 
 export default function Home() {
-    const cachedDarkMode = getItem(LOCAL_STORAGE_KEY_DARK_MODE);
-    const [darkMode, setDarkMode] = useState(
-        cachedDarkMode ? JSON.parse(cachedDarkMode) : true,
-    );
+    const [darkMode, setDarkMode] = useState(true);
+
+    useEffect(() => {
+        const cachedDarkMode = getItem(LOCAL_STORAGE_KEY_DARK_MODE);
+        if (cachedDarkMode) {
+            setDarkMode(JSON.parse(cachedDarkMode));
+        }
+    }, []);
 
     return (
         <main
