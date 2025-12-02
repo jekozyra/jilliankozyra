@@ -1,4 +1,7 @@
 export const getItem = (key: string): string | null => {
+    if (typeof window === 'undefined') {
+        return null;
+    }
     try {
         return localStorage.getItem(key);
     } catch (error) {
@@ -9,6 +12,9 @@ export const getItem = (key: string): string | null => {
 };
 
 export const setItem = (key: string, value: string): void => {
+    if (typeof window === 'undefined') {
+        return;
+    }
     try {
         localStorage.setItem(key, value);
     } catch (error) {
@@ -18,6 +24,9 @@ export const setItem = (key: string, value: string): void => {
 };
 
 export const removeItem = (key: string): void => {
+    if (typeof window === 'undefined') {
+        return;
+    }
     try {
         localStorage.removeItem(key);
     } catch (error) {

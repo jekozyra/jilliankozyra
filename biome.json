@@ -1,16 +1,17 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
   "files": {
-    "ignore": [
-      "**/node_modules/**",
-      "**/__snapshots__/**",
-      "**/build/**",
-      "**/public/**",
-      "**/.next/**",
-      "**/.yarn/**",
-      "**/.mypy_cache/**",
-      "**/.vscode/**",
-      "**/generated/**"
+    "includes": [
+      "**",
+      "!**/node_modules/**",
+      "!**/__snapshots__/**",
+      "!**/build/**",
+      "!**/public/**",
+      "!**/.next/**",
+      "!**/.yarn/**",
+      "!**/.mypy_cache/**",
+      "!**/.vscode/**",
+      "!**/generated/**"
     ]
   },
   "formatter": {
@@ -44,9 +45,7 @@
         "noUnusedImports": "error",
         "noUnusedVariables": "error"
       },
-      "nursery": {
-        "noConsole": "error"
-      },
+      "nursery": {},
       "performance": {
         "noDelete": "off"
       },
@@ -56,7 +55,8 @@
         "noConstEnum": "off",
         "noEmptyInterface": "off",
         "noExplicitAny": "off",
-        "noRedeclare": "off"
+        "noRedeclare": "off",
+        "noConsole": "error"
       },
       "style": {
         "noInferrableTypes": "off",
@@ -67,7 +67,5 @@
       }
     }
   },
-  "organizeImports": {
-    "enabled": false
-  }
+  "assist": { "actions": { "source": { "organizeImports": "off" } } }
 }
